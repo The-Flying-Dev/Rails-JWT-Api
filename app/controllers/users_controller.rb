@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorized, only: [:auto_login]
+  before_action :authorized, only: [:auto_login] #specific to this route
 
   # register 
   def create 
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   end
 
   def auto_login 
-    rende json: @user 
+    render json: @user 
   end
 
   private 
